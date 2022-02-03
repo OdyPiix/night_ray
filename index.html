@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <!-- import aframe and then ar.js with image tracking / location based features -->
+        
         <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
         
@@ -27,7 +27,7 @@
 	    };
     	</script>
     </head>    
-    <!-- style for the loader -->
+
     <style>
     .arjs-loader {
         height: 100%;
@@ -50,7 +50,7 @@
     </style>
 
     <body style="margin : 0px; overflow: hidden;">
-	    <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
+	   
 	    <div class="arjs-loader">
 		<div style = "font-family:roboto">Loading, please wait...</div>
 	    </div>
@@ -67,9 +67,7 @@
 			<video src="assets/asset.mp4" preload="auto" id="digi_vid" response-type="arraybuffer" loop
 			crossorigin webkit-playsinline autoplay muted playsinline></video>
 		</a-assets>
-		<!-- a-nft is the anchor that defines an Image Tracking entity -->
-		<!-- on 'url' use the path to the Image Descriptors created before. -->
-		<!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
+		
 		<a-nft 
 		videohandler
 		type="nft"
@@ -80,7 +78,6 @@
 		smoothTolerance=".01"
 		smoothThreshold="5"
 		>
-		    <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
 		    <a-video
 			src="#digi_vid"
 			position='0 0.1 0'
@@ -90,7 +87,6 @@
 			>
 		    </a-video>
 		</a-nft>
-		<!-- static camera that moves according to the device movemenents -->
 		<a-entity camera></a-entity>
 	    </a-scene>
     </body>
